@@ -84,6 +84,7 @@ module appservice './host/appservice.bicep' = {
     runtimeVersion: '16-lts'
     alwaysOn: true
     ftpsState: 'FtpsOnly'
+    scmDoBuildDuringDeployment: true
   }
 }
 
