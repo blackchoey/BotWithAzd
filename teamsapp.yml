@@ -28,11 +28,6 @@ provision:
       # The Azure Active Directory application's client secret created for bot.
       botPassword: SECRET_BOT_PASSWORD
 
-  # Use a custom script copy TeamsFx env vars to AZD env files
-  - uses: script
-    with:
-      run: "& \"./copyforazd.ps1\" -env \"${{TEAMSFX_ENV}}\""
-
   # Use AZD CLI to provision Azure resources for this app
   - uses: script
     with:
